@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Island_Domination">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}"/>
+    <property name="dir.jarfile" value="${dir.workspace}/Island_Domination"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/IslandDomination.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="Main.Main"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Program Files/Java/Java3D/1.5.1/lib/ext/j3dcore.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Program Files/Java/Java3D/1.5.1/lib/ext/j3dutils.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Program Files/Java/Java3D/1.5.1/lib/ext/vecmath.jar"/>
+        </jar>
+    </target>
+</project>
